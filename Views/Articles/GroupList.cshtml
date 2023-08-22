@@ -1,0 +1,51 @@
+﻿@model ArticleListViewModel
+@section scripts {
+    <script src="/js/jquery.cycle2.min.js" asp-append-version="true"></script>
+    <script src="/js/jquery.cycle2.caption2.min.js"></script>
+    <script src="/js/slidestextmanager.js" asp-append-version="true"></script>
+}
+<table>
+    <tr>
+        <td class="hide-on-mobile">
+            <h2 id="caption"></h2>
+        </td>
+    </tr>
+</table>
+<p>
+    <span class="cycle-slideshow image-detail image-detail-full"
+         data-cycle-fx=scrollHorz
+         data-cycle-timeout="2000"
+         data-cycle-pause-on-hover="true"
+         data-cycle-caption-plugin=caption2>
+        <span class="cycle-caption"></span>
+        <span class="cycle-overlay"></span>        
+            <partial name="_ContentGroupPartial" />
+            <partial name="_ContentMarciaPartial" />
+            <partial name="_ContentCarolPartial" />
+            <partial name="_ContentGregPartial" />
+            <partial name="_ContentJanPartial" />
+            <partial name="_ContentAlicePartial" />
+            <partial name="_ContentPeterPartial" />
+            <partial name="_ContentCindyPartial" />
+            <partial name="_ContentMikePartial" />
+            <partial name="_ContentBobbyPartial" />
+    </span>
+    <span id="p1">
+    </span>
+    <br /><br />
+    <span id="p2">
+    </span>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+

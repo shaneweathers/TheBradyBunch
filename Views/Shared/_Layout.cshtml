@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="The Brady Bunch, Marcia Brady, Jan Brady, Cindy Brady, Peter Brady, Bobby Brady, Greg Brady, Carol Brady, Mike Brady, Alice Nelson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - The Brady Bunch</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="/css/bradybunchstyles.css" />
+    @*<link rel="stylesheet" href="/css/faqs.css" />*@       
+    <link rel=stylesheet   href="/css/demo-slideshow.css">
+</head>
+<body>
+    <header class="hide-on-mobile">
+       <h1>The Brady Bunch</h1>
+    </header>
+    @{
+        var actionCurrent = ViewContext.RouteData.Values["action"]?.ToString();
+        var idCurrent = Context.Request.Query["categoryid"].ToString();
+    }
+    <nav>
+         <ul>
+            <li><a asp-controller="Home" asp-action="Home"><span class="@Nav.Active("Home", actionCurrent)">Home</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="1"><span class="@Nav.Active("1", idCurrent)">Marsha</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="2"><span class="@Nav.Active("2", idCurrent)">Carol</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="3"><span class="@Nav.Active("3", idCurrent)">Greg</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="4"><span class="@Nav.Active("4", idCurrent)">Jan</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="5"><span class="@Nav.Active("5", idCurrent)">Alice</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="6"><span class="@Nav.Active("6", idCurrent)">Peter</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="7"><span class="@Nav.Active("7", idCurrent)">Cindy</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="8"><span class="@Nav.Active("8", idCurrent)">Mike</span></a></li>
+            <li><a asp-controller="Articles" asp-action="List" asp-route-categoryid="9"><span class="@Nav.Active("9", idCurrent)">Bobby</span></a></li>
+            <li><a asp-controller="Articles" asp-action="GroupList" asp-route-categoryid="10"><span class="@Nav.Active("10", idCurrent)">Group</span></a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <div id="image-list">
+            <a href="/images/small/Bobby.jpg" title=""></a>
+            <a href="/images/small/Mike.jpg" title=""></a>
+            <a href="/images/small/Cindy.jpg" title=""></a>
+            <a href="/images/small/Peter.jpg" title=""></a>
+            <a href="/images/small/Alice.jpg" title=""></a>
+            <a href="/images/small/Jan.jpg" title=""></a>
+            <a href="/images/small/Greg.jpg" title=""></a>
+            <a href="/images/small/Carol.jpg" title=""></a>
+            <a href="/images/small/Marsha.jpg" title=""></a>
+            <a href="/images/bannertv3.png" title=""></a>
+            <a href="/images/large/Marsha1.jpg" title=""></a>
+            <a href="/images/large/Marsha2.jfif" title=""></a>
+            <a href="/images/large/Marsha3.jpg" title=""></a>
+            <a href="/images/large/Marsha4.jpg" title=""></a>
+            <a href="/images/large/Marsha5.jfif" title=""></a>
+            <a href="/images/large/Alice1.jpg" title=""></a>
+            <a href="/images/large/Alice2.jfif" title=""></a>
+            <a href="/images/large/Alice3.jfif" title=""></a>
+            <a href="/images/large/Alice4.jpg" title=""></a>
+            <a href="/images/large/Alice5.jfif" title=""></a>
+            <a href="/images/large/Bobby1.jfif" title=""></a>
+            <a href="/images/large/Bobby2.jfif" title=""></a>
+            <a href="/images/large/Bobby3.jpg" title=""></a>
+            <a href="/images/large/Bobby4.jfif" title=""></a>
+            <a href="/images/large/Bobby5.jpg" title=""></a>
+            <a href="/images/large/Carol1.jpg" title=""></a>
+            <a href="/images/large/Carol2.png" title=""></a>
+            <a href="/images/large/Carol3.jpg" title=""></a>
+            <a href="/images/large/Carol4.jfif" title=""></a>
+            <a href="/images/large/Carol5.jpg" title=""></a>
+            <a href="/images/large/Cindy1.jfif" title=""></a>
+            <a href="/images/large/Cindy2.jfif" title=""></a>
+            <a href="/images/large/Cindy3.jpg" title=""></a>
+            <a href="/images/large/Cindy4.jfif" title=""></a>
+            <a href="/images/large/Cindy5.jfif" title=""></a>
+            <a href="/images/large/Greg1.jfif" title=""></a>
+            <a href="/images/large/Greg2.jfif" title=""></a>
+            <a href="/images/large/Greg3.jfif" title=""></a>
+            <a href="/images/large/Greg4.jpg" title=""></a>
+            <a href="/images/large/Greg5.jfif" title=""></a>
+            <a href="/images/large/Group1.jpg" title=""></a>
+            <a href="/images/large/Group2.jpg" title=""></a>
+            <a href="/images/large/Group3.jpg" title=""></a>
+            <a href="/images/large/Group4.jfif" title=""></a>
+            <a href="/images/large/Group5.jpg" title=""></a>
+            <a href="/images/large/Jan1.jpg" title=""></a>
+            <a href="/images/large/Jan2.jfif" title=""></a>
+            <a href="/images/large/Jan3.jfif" title=""></a>
+            <a href="/images/large/Jan4.jfif" title=""></a>
+            <a href="/images/large/Jan5.jpeg" title=""></a>
+            <a href="/images/large/Mike1.jpg" title=""></a>
+            <a href="/images/large/Mike2.jpg" title=""></a>
+            <a href="/images/large/Mike3.jpg" title=""></a>
+            <a href="/images/large/Mike4.jpg" title=""></a>
+            <a href="/images/large/Mike5.jpg" title=""></a>
+            <a href="/images/large/Peter1.jpg" title=""></a>
+            <a href="/images/large/Peter2.jfif" title=""></a>
+            <a href="/images/large/Peter3.png" title=""></a>
+            <a href="/images/large/Peter4.jfif" title=""></a>
+            <a href="/images/large/Peter5.jpg" title=""></a>
+
+        </div>
+        <article>
+            @RenderBody()
+        </article>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy;@DateTime.Now.Year My Star Tributes LLC
+        </p>
+        <p>
+            <a href="https://classiccarcitywebapp.azurewebsites.net/home/resume" target="_blank">Contact Webmaster</a>
+        </p>
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/js/site.js" asp-append-version="true"></script>
+    @*<script src="/js/faqs.js" asp-append-version="true"></script>*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

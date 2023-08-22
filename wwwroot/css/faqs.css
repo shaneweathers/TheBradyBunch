@@ -1,0 +1,13 @@
+﻿#faqs h3 {
+    font-size: 120%;
+    padding: .25em 0 .25em 25px;
+    background: url(/images/plus.png) no-repeat left center;
+}
+
+    #faqs h3.minus {
+        background: url(/images/minus.png) no-repeat left center;
+    }
+
+.faqs-ul {
+    display: none;
+}
